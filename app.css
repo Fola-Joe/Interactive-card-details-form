@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, img {
+	display: block;
+}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {box-sizing: border-box;}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    position: relative;
+}
+
+.img-1, .front-page > img, .back-page > img {
+	width: 100%;
+}
+.front-page, .back-page {
+	width: 18rem;
+	position: relative;
+}
+.front-page {
+	margin-top: -7rem;
+	margin-left: 1rem;
+	z-index: 1;
+}
+.front-info {
+	color: hsl(0, 0%, 100%);
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	right: 1.5rem;
+	bottom: 1rem;
+}
+.img-1-1 {
+	width: 3.25rem;
+	margin-bottom: 2.5rem;
+}
+h1 {
+	margin-bottom: 1.25rem;
+	font-size: 1.05rem;
+	letter-spacing: 0.2rem;
+}
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.75rem;
+	opacity: 0.8;
+	text-transform: uppercase;
+}
+.back-page {
+	margin-top: -15.35rem;
+	margin-left: 4.5rem;
+	z-index: 0;
+}
+p {
+	font-size: 0.75rem;
+	position: absolute;
+	top: 4.5rem;
+	right: 2.2rem;
+	color: hsl(270, 3%, 87%);
+	letter-spacing: 0.05rem;
+}
+
+main {
+	max-width: 350px;
+}
