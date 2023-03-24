@@ -44,9 +44,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+	width: 100%;
 }
 header {
     position: relative;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .img-1, .front-page > img, .back-page > img {
@@ -102,4 +106,50 @@ p {
 
 main {
 	max-width: 350px;
+	margin-top: 8.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+h4 {
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	margin-bottom: 0.5rem;
+}
+.input-1, .input-2, .date {
+	margin-bottom: 1rem;
+	margin-right: 1.75rem;
+}
+.date {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 0.3rem;
+}
+input {
+	font-family: 'Space Grotesk', sans-serif;
+	width: 100%;
+	padding: 0.5rem;
+	padding-left: 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid hsl(270, 3%, 87%);
+	outline: none;
+}
+.exp-date > input {
+	width: 3rem;
+	display: inline;
+}
+::placeholder {
+	color: hsl(279, 6%, 55%);
+	opacity: 0.5;
+}
+button {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 1rem;
+	padding: 0.75rem;
+	margin-bottom: 2rem;
+	width: 100%;
+	border-radius: 0.5rem;
+	border: none;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(278, 68%, 11%);
 }
