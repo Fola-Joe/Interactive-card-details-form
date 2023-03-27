@@ -46,11 +46,27 @@ body {
     justify-content: center;
 	width: 100%;
 }
+.wrapper {width: 100%;}
 header {
     position: relative;
+	background-image: url(images/bg-main-mobile.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	height: 15rem;
 	width: 100%;
 	margin-left: 0;
 	margin-right: 0;
+	margin-top: 0;
+}
+
+.cards {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	margin-top: 0;
 }
 
 .img-1, .front-page > img, .back-page > img {
@@ -61,11 +77,11 @@ header {
 	position: relative;
 }
 .front-page {
-	margin-top: -7rem;
+	margin-top: 7.5rem;
 	margin-left: 1rem;
 	z-index: 1;
 }
-.front-info {
+.front-page-info {
 	color: hsl(0, 0%, 100%);
 	position: absolute;
 	top: 1rem;
@@ -91,7 +107,7 @@ h1 {
 	text-transform: uppercase;
 }
 .back-page {
-	margin-top: -15.35rem;
+	margin-top: -16rem;
 	margin-left: 4.5rem;
 	z-index: 0;
 }
@@ -109,6 +125,8 @@ main {
 	margin-top: 8.5rem;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 h4 {
 	font-size: 0.8rem;
@@ -152,4 +170,10 @@ button {
 	border: none;
 	color: hsl(0, 0%, 100%);
 	background-color: hsl(278, 68%, 11%);
+	transition: all 0.7s;
+}
+button:hover {
+	cursor: pointer;
+	background-color: hsl(270, 3%, 87%);
+	color: hsl(278, 68%, 11%);
 }
