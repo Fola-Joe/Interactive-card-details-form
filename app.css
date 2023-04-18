@@ -185,6 +185,7 @@ h4, h5 {color: hsl(278, 68%, 11%);}
 .completed {
 	text-align: center;
 	display: none;
+	margin-top: 5.5rem;
 }
 .completed img {
 	margin: 0 auto 2rem;
