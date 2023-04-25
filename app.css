@@ -47,7 +47,7 @@ body {
 }
 .wrapper {width: 100%;}
 header {
-    position: relative;
+    /* position: relative; */
 	background-image: url(images/bg-main-mobile.png);
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -57,8 +57,9 @@ header {
 }
 
 .cards {
-	position: absolute;
-	top: 0;
+	position: relative;
+	/* top: 0; */
+	/* right: 0; */
 	max-width: 350px;
 	margin-left: auto;
 	margin-right: auto;
@@ -103,7 +104,7 @@ h1 {
 }
 .back-page {
 	top: -8rem;
-	left: 25%;
+	left: 18%;
 	z-index: 0;
 }
 .cvc-content {
@@ -174,8 +175,10 @@ button:hover {
 	color: hsl(278, 68%, 11%);
 }
 
+.error-1-1, .error-2-2, .error-1,
+.error-2, .error-3, .error-4 {display: none;}
 .error-msg {
-	display: none;
+	/* display: none; */
 	font-size: 0.65rem;
 	color: hsl(0, 100%, 66%);
 }
