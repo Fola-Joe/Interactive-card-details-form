@@ -116,7 +116,7 @@ h1 {
 	letter-spacing: 0.05rem;
 }
 
-main {
+.input-details {
 	max-width: 350px;
 	margin-top: 8.5rem;
 	padding-left: 1.5rem;
