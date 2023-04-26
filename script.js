@@ -19,76 +19,105 @@ const year = document.querySelector('.yy');
 const cvcInput = document.querySelector('#cvc');
 const cvc = document.querySelector('.cvc-content');
 
-// functions
-function cardNumber(e) {
-    cardNum.innerText = format(e.target.value);
-}
-function cardName(e){
+
+
+nameInput.addEventListener('keyup', function cardName(e){
     nameField.innerText = e.target.value;
-}
-function monthNumber(e){
+});
+cardNumInput.addEventListener('keyup', function cardNumber(e) {
+    cardNum.innerText = (e.target.value);
+});
+monthInput.addEventListener('keyup', function monthNumber(e){
     month.innerText = e.target.value;
-}
-function yearNumber(e){
+});
+yearInput.addEventListener('keyup', function yearNumber(e){
     year.innerText = e.target.value;
-}
-function cvcNumber(e){
+});
+cvcInput.addEventListener('keyup', function cvcNumber(e){
     cvc.innerText = e.target.value;
-}
+});
 
-function format(str){
-    return str.toString().replace(/\d{4}(?=.)/g,"$&");
-}
 
-nameInput.addEventListener('keyup', cardName);
-cardNumInput.addEventListener('keyup', cardNumber);
-monthInput.addEventListener('keyup', monthNumber);
-yearInput.addEventListener('keyup', yearNumber);
-cvcInput.addEventListener('keyup', cvcNumber);
+// To avoid inputting characters other than numbers
+cardNumInput.addEventListener('input', (e) => {
+  const input = e.target.value;
+  const numbersOnly = input.replace(/[^0-9]/g, '');
+  e.target.value = numbersOnly;
+});
+monthInput.addEventListener('input', (e) => {
+  const input = e.target.value;
+  const numbersOnly = input.replace(/[^0-9]/g, '');
+  e.target.value = numbersOnly;
+});
+yearInput.addEventListener('input', (e) => {
+  const input = e.target.value;
+  const numbersOnly = input.replace(/[^0-9]/g, '');
+  e.target.value = numbersOnly;
+});
+cvcInput.addEventListener('input', (e) => {
+  const input = e.target.value;
+  const numbersOnly = input.replace(/[^0-9]/g, '');
+  e.target.value = numbersOnly;
+});
+//
 
 const inputs = document.querySelectorAll('input');
 
 submit.addEventListener('click', function btnSubmit(e) {
     e.preventDefault();
+    const nameError = document.querySelector('.error-1');
     if (!nameInput.value){
-        const nameError = document.querySelector('.error-1');
+        // const nameError = document.querySelector('.error-1');
         nameError.classList.add('err-msg');
         inputs[0].classList.add('input-err');
-    } else {
+    } else if (nameInput.value) {
         nameError.classList.remove('err-msg');
         inputs[0].classList.remove('input-err');
     }
+
+    const numError = document.querySelector('.error-2-2');
     if (!cardNumInput.value){
-        const numError = document.querySelector('.error-2-2');
+        // const numError = document.querySelector('.error-2-2');
         numError.classList.add('err-msg');
         inputs[1].classList.add('input-err');
     } else {
         numError.classList.remove('err-msg');
         inputs[1].classList.remove('input-err');
     }
+
+    const monthError = document.querySelector('.error-3');
     if (!monthInput.value){
-        const monthError = document.querySelector('.error-3');
+        // const monthError = document.querySelector('.error-3');
         monthError.classList.add('err-msg');
         inputs[2].classList.add('input-err');
     } else {
         monthError.classList.remove('err-msg');
         inputs[2].classList.remove('input-err');
     }
+
+    const yearError = document.querySelector('.error-3');
     if (!yearInput.value){
-        const yearError = document.querySelector('.error-3');
+        // const yearError = document.querySelector('.error-3');
         yearError.classList.add('err-msg');
         inputs[3].classList.add('input-err');
     } else {
         yearError.classList.remove('err-msg');
         inputs[3].classList.remove('input-err');
     }
+
+    const cvcError = document.querySelector('.error-4');
     if (!cvcInput.value){
-        const cvcError = document.querySelector('.error-4');
+        // const cvcError = document.querySelector('.error-4');
         cvcError.classList.add('err-msg');
         inputs[4].classList.add('input-err');
     } else {
         cvcError.classList.remove('err-msg');
         inputs[4].classList.remove('input-err');
+    }
+
+    if (nameInput.value && cardNumInput.value && monthInput.value && yearInput.value && cvcInput.value){
+        completedPage.style.display = 'block';
+        firstPage.style.display = 'none';
     }
 })
 
