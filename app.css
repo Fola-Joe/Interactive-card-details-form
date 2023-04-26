@@ -147,7 +147,7 @@ input {
 	border-radius: 0.5rem;
 	border: 1px solid hsl(270, 3%, 87%);
 	outline: none;
-	margin-bottom: 0.25rem;
+	margin-bottom: 0.3rem;
 }
 .exp-date > input {
 	width: 3rem;
@@ -175,13 +175,15 @@ button:hover {
 	color: hsl(278, 68%, 11%);
 }
 
-.error-1-1, .error-2-2, .error-1,
-.error-2, .error-3, .error-4 {display: none;}
+/* .error-1-1, .error-2-2, .error-1,
+.error-2, .error-3, .error-4 {display: none;} */
 .error-msg {
-	/* display: none; */
+	display: none;
 	font-size: 0.65rem;
 	color: hsl(0, 100%, 66%);
 }
+.input-err {border-color: hsl(0, 100%, 66%);}
+.err-msg {display: block;}
 h4, h5 {color: hsl(278, 68%, 11%);}
 
 /* Completed section */

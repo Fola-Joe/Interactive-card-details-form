@@ -46,9 +46,50 @@ monthInput.addEventListener('keyup', monthNumber);
 yearInput.addEventListener('keyup', yearNumber);
 cvcInput.addEventListener('keyup', cvcNumber);
 
+const inputs = document.querySelectorAll('input');
+
 submit.addEventListener('click', function btnSubmit(e) {
     e.preventDefault();
-
+    if (!nameInput.value){
+        const nameError = document.querySelector('.error-1');
+        nameError.classList.add('err-msg');
+        inputs[0].classList.add('input-err');
+    } else {
+        nameError.classList.remove('err-msg');
+        inputs[0].classList.remove('input-err');
+    }
+    if (!cardNumInput.value){
+        const numError = document.querySelector('.error-2-2');
+        numError.classList.add('err-msg');
+        inputs[1].classList.add('input-err');
+    } else {
+        numError.classList.remove('err-msg');
+        inputs[1].classList.remove('input-err');
+    }
+    if (!monthInput.value){
+        const monthError = document.querySelector('.error-3');
+        monthError.classList.add('err-msg');
+        inputs[2].classList.add('input-err');
+    } else {
+        monthError.classList.remove('err-msg');
+        inputs[2].classList.remove('input-err');
+    }
+    if (!yearInput.value){
+        const yearError = document.querySelector('.error-3');
+        yearError.classList.add('err-msg');
+        inputs[3].classList.add('input-err');
+    } else {
+        yearError.classList.remove('err-msg');
+        inputs[3].classList.remove('input-err');
+    }
+    if (!cvcInput.value){
+        const cvcError = document.querySelector('.error-4');
+        cvcError.classList.add('err-msg');
+        inputs[4].classList.add('input-err');
+    } else {
+        cvcError.classList.remove('err-msg');
+        inputs[4].classList.remove('input-err');
+    }
 })
 
 continueBtn.addEventListener('click', function(){

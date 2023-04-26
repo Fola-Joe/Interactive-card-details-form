@@ -38,20 +38,20 @@
       </div>
       <div class="input-2">
         <h4>Card Number</h4>
-        <input type="number" name="number" placeholder="e.g. 1234 5678 9123 0000" id="card-num" minlength="16" maxlength="16" required>
+        <input type="text" name="number" placeholder="e.g. 1234 5678 9123 0000" id="card-num" minlength="16" maxlength="16" required pattern="[0-9]+">
         <span class="error-msg error-2">Wrong format, numbers only</span>
         <span class="error-msg error-2-2">Can't be blank</span>
       </div>
       <div class="date">
         <div class="exp-date">
           <h4>Exp. Date (MM/YY)</h4>
-          <input type="number" name="exp" placeholder="MM" id="month" minlength="2" maxlength="2" required>
-          <input type="number" name="exp" placeholder="YY" id="year" minlength="2" maxlength="2" required>
+          <input type="text" name="exp" placeholder="MM" id="month" minlength="2" maxlength="2" required pattern="[0-9]+">
+          <input type="text" name="exp" placeholder="YY" id="year" minlength="2" maxlength="2" pattern="[0-9]+" required>
           <span class="error-msg error-3">Can't be blank</span>
         </div>
         <div class="cvc">
           <h4>CVC</h4>
-          <input type="number" name="cvc" placeholder="e.g. 123" id="cvc"minlength="3" maxlength="3" required>
+          <input type="text" name="cvc" placeholder="e.g. 123" id="cvc"minlength="3" maxlength="3" pattern="[0-9]+" required>
           <span class="error-msg error-4">Can't be blank</span>
         </div>
       </div>
