@@ -55,16 +55,12 @@ header {
 	height: 15rem;
 	width: 100%;
 }
-
 .cards {
 	position: relative;
-	/* top: 0; */
-	/* right: 0; */
 	max-width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .img-1, .front-page > img, .back-page > img {
 	width: 100%;
 }
@@ -74,7 +70,7 @@ header {
 }
 .front-page {
 	top: 7.5rem;
-	left: 5%;
+	left: 0.25rem;
 	z-index: 1;
 }
 .front-page-info {
@@ -104,7 +100,7 @@ h1 {
 }
 .back-page {
 	top: -8rem;
-	left: 18%;
+	right: -3.75rem;
 	z-index: 0;
 }
 .cvc-content {
@@ -149,6 +145,7 @@ input {
 	outline: none;
 	margin-bottom: 0.3rem;
 }
+input:focus {background-color: transparent;}
 .exp-date > input {
 	width: 3rem;
 	display: inline;
@@ -188,9 +185,10 @@ h4, h5 {color: hsl(278, 68%, 11%);}
 
 /* Completed section */
 .completed {
+	max-width: 330px;
 	text-align: center;
+	margin: 5.5rem auto 1rem;
 	display: none;
-	margin-top: 5.5rem;
 }
 .completed img {
 	margin: 0 auto 2rem;
@@ -204,4 +202,15 @@ h5 {
 .completed-p {
 	margin-bottom: 2.5rem;
 	color: hsl(279, 6%, 55%);
+}
+
+@media screen and (min-width: 850px) {
+	body {height: 100%; min-height: auto;}
+	.wrapper {
+		display: grid;
+		grid-template-columns: 0.5fr 1.5fr;
+	}
+	header {
+		height: 100%;
+	}
 }

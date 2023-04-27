@@ -61,13 +61,35 @@ cvcInput.addEventListener('input', (e) => {
 });
 //
 
+// inputs[1].addEventListener('input', function (e){
+//     let inputValue = e.target.value;
+//     inputValue = inputValue.replace(/(\d{4})/g, ' ');
+//     e.target.value = inputValue;
+// })
+
+// inputs[1].addEventListener('input', function(e) {
+//     // Get the input value
+//     let value = e.target.value;
+  
+//     // Remove any non-digit characters
+//     value = value.replace(/\D/g, '');
+  
+//     // Split the value into groups of four digits
+//     let parts = [];
+//     for (let i = 0, len = value.length; i < len; i += 4) {
+//       parts.push(value.slice(i, i + 4));
+//     }
+  
+//     // Join the groups of four digits with spaces and update the input value
+//     e.target.value = parts.join(' ');
+//   });
+
 const inputs = document.querySelectorAll('input');
 
 submit.addEventListener('click', function btnSubmit(e) {
     e.preventDefault();
     const nameError = document.querySelector('.error-1');
     if (!nameInput.value){
-        // const nameError = document.querySelector('.error-1');
         nameError.classList.add('err-msg');
         inputs[0].classList.add('input-err');
     } else if (nameInput.value) {
@@ -77,7 +99,6 @@ submit.addEventListener('click', function btnSubmit(e) {
 
     const numError = document.querySelector('.error-2-2');
     if (!cardNumInput.value){
-        // const numError = document.querySelector('.error-2-2');
         numError.classList.add('err-msg');
         inputs[1].classList.add('input-err');
     } else {
@@ -87,7 +108,6 @@ submit.addEventListener('click', function btnSubmit(e) {
 
     const monthError = document.querySelector('.error-3');
     if (!monthInput.value){
-        // const monthError = document.querySelector('.error-3');
         monthError.classList.add('err-msg');
         inputs[2].classList.add('input-err');
     } else {
@@ -97,7 +117,6 @@ submit.addEventListener('click', function btnSubmit(e) {
 
     const yearError = document.querySelector('.error-3');
     if (!yearInput.value){
-        // const yearError = document.querySelector('.error-3');
         yearError.classList.add('err-msg');
         inputs[3].classList.add('input-err');
     } else {
@@ -107,7 +126,6 @@ submit.addEventListener('click', function btnSubmit(e) {
 
     const cvcError = document.querySelector('.error-4');
     if (!cvcInput.value){
-        // const cvcError = document.querySelector('.error-4');
         cvcError.classList.add('err-msg');
         inputs[4].classList.add('input-err');
     } else {
@@ -125,4 +143,3 @@ continueBtn.addEventListener('click', function(){
     completedPage.style.display = 'none';
     firstPage.style.display = 'block';
 })
-
