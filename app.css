@@ -66,6 +66,8 @@ header {
 .front-page, .back-page {
 	width: 18rem;
 	position: relative;
+	border-radius: 1rem;
+	box-shadow: 10px 30px 30px hsla(278, 68%, 11%, 0.1);
 }
 .front-page {
 	top: 7.5rem;
@@ -144,7 +146,9 @@ input {
 	outline: none;
 	margin-bottom: 0.3rem;
 }
-input:focus {background-color: transparent;}
+/* input:hover {
+	border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+} */
 .exp-date > input {
 	width: 3rem;
 	display: inline;
@@ -200,6 +204,13 @@ h5 {
 	color: hsl(279, 6%, 55%);
 }
 
+@media screen and (min-width: 800px) {
+	.completed, .input-details {
+		width: 100%;
+		max-width: 400px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	body {
 		min-height: 100vh;
@@ -236,12 +247,14 @@ h5 {
 	.cards {margin: none;}
 	h4 {font-size: 0.9rem;}
 	.input-details {max-width: 380px;}
-	input {padding: 0.7rem;}
-	button {padding: 1rem;}
+	input {padding: 0.7rem; font-size: 1.1rem;}
+	button {padding: 1rem; font-size: 1.2rem;}
 	.completed {
 		width: 100%;
 		margin: 0;
 		margin-left: 2rem;
 		max-width: 380px;
 	}
+	h5 {font-size: 2rem;}
+	.completed-p {font-size: 1.25rem;}
 }	
