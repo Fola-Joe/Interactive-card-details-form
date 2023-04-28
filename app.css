@@ -47,7 +47,6 @@ body {
 }
 .wrapper {width: 100%;}
 header {
-    /* position: relative; */
 	background-image: url(images/bg-main-mobile.png);
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -111,7 +110,6 @@ h1 {
 	color: hsl(270, 3%, 87%);
 	letter-spacing: 0.05rem;
 }
-
 .input-details {
 	max-width: 350px;
 	margin-top: 8.5rem;
@@ -171,9 +169,6 @@ button:hover {
 	background-color: hsl(270, 3%, 87%);
 	color: hsl(278, 68%, 11%);
 }
-
-/* .error-1-1, .error-2-2, .error-1,
-.error-2, .error-3, .error-4 {display: none;} */
 .error-msg {
 	display: none;
 	font-size: 0.65rem;
@@ -182,6 +177,7 @@ button:hover {
 .input-err {border-color: hsl(0, 100%, 66%);}
 .err-msg {display: block;}
 h4, h5 {color: hsl(278, 68%, 11%);}
+
 
 /* Completed section */
 .completed {
@@ -205,12 +201,57 @@ h5 {
 }
 
 @media screen and (min-width: 850px) {
-	body {height: 100%; min-height: auto;}
+	body {
+		background-image: url(images/bg-main-desktop.png);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 34% 300%;
+		/* height: 100%;  */
+		min-height: auto;
+	}
 	.wrapper {
 		display: grid;
 		grid-template-columns: 0.5fr 1.5fr;
+		align-items: center;
+		justify-content: center;
 	}
 	header {
-		height: 100%;
+		background-image: none;
+		/* height: 100%; */
+	}
+	.input-details {
+		max-width: 400px;
+		margin-top: 30%;
+		margin-left: 35%;
+		/* margin: 25% auto; */
+	}
+	.completed {
+		max-width: 400px;
+	}
+	.front-page, .back-page {width: 25rem;}
+	.front-page {
+		top: 0;
+		left: 10rem;
+	}
+	.front-page-info {
+		top: 1.5rem;
+		left: 1.5rem;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	h2, h3 {font-size: 1.2rem;}
+	.img-1-1 {
+		width: 5rem;
+		margin-bottom: 4rem;
+	}
+	.back-page {
+		top: 2rem;
+		left: 15rem;
+	}
+	.cvc-content {
+		top: 6.2rem;
+		right: 3rem;
+		font-size: 1rem;
 	}
 }

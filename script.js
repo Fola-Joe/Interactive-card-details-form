@@ -20,7 +20,6 @@ const cvcInput = document.querySelector('#cvc');
 const cvc = document.querySelector('.cvc-content');
 
 
-
 nameInput.addEventListener('keyup', function cardName(e){
     nameField.innerText = e.target.value;
 });
@@ -61,31 +60,7 @@ cvcInput.addEventListener('input', (e) => {
 });
 //
 
-// inputs[1].addEventListener('input', function (e){
-//     let inputValue = e.target.value;
-//     inputValue = inputValue.replace(/(\d{4})/g, ' ');
-//     e.target.value = inputValue;
-// })
-
-// inputs[1].addEventListener('input', function(e) {
-//     // Get the input value
-//     let value = e.target.value;
-  
-//     // Remove any non-digit characters
-//     value = value.replace(/\D/g, '');
-  
-//     // Split the value into groups of four digits
-//     let parts = [];
-//     for (let i = 0, len = value.length; i < len; i += 4) {
-//       parts.push(value.slice(i, i + 4));
-//     }
-  
-//     // Join the groups of four digits with spaces and update the input value
-//     e.target.value = parts.join(' ');
-//   });
-
 const inputs = document.querySelectorAll('input');
-
 submit.addEventListener('click', function btnSubmit(e) {
     e.preventDefault();
     const nameError = document.querySelector('.error-1');
