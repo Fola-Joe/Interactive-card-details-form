@@ -37,6 +37,7 @@ cvcInput.addEventListener('keyup', function cvcNumber(e){
 });
 
 
+//Input events
 nameInput.addEventListener('input', (e) => {
   const input = e.target.value;
   // Remove all non-letter characters
@@ -69,8 +70,9 @@ cvcInput.addEventListener('input', (e) => {
   const numbersOnly = input.replace(/[^0-9]/g, '');
   e.target.value = numbersOnly;
 });
-//
 
+
+//Submit event
 const inputs = document.querySelectorAll('input');
 submit.addEventListener('click', function btnSubmit(e) {
     e.preventDefault();
@@ -96,7 +98,12 @@ submit.addEventListener('click', function btnSubmit(e) {
     if (!monthInput.value){
         monthError.classList.add('err-msg');
         inputs[2].classList.add('input-err');
-    } else {
+    } else if (monthInput.value > 13){
+        const monthError3 = document.querySelector('.error-3-3');
+        monthError3.classList.add('err-msg');
+        inputs[2].classList.add('input-err');
+    } 
+    else {
         monthError.classList.remove('err-msg');
         inputs[2].classList.remove('input-err');
     }
@@ -119,7 +126,7 @@ submit.addEventListener('click', function btnSubmit(e) {
         inputs[4].classList.remove('input-err');
     }
 
-    if (nameInput.value && cardNumInput.value && monthInput.value && yearInput.value && cvcInput.value){
+    if (nameInput.value && cardNumInput.value && monthInput.value < 13 && yearInput.value && cvcInput.value){
         completedPage.style.display = 'block';
         firstPage.style.display = 'none';
     }
@@ -128,4 +135,10 @@ submit.addEventListener('click', function btnSubmit(e) {
 continueBtn.addEventListener('click', function(){
     completedPage.style.display = 'none';
     firstPage.style.display = 'block';
+    nameInput.value = '';
+    cardNumInput.value = '';
+    monthInput.value = '';
+    yearInput.value = '';
+    cvcInput.value = '';
+    monthError3.classList.remove('err-msg');
 })

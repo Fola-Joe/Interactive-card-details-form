@@ -32,7 +32,12 @@
     <form class="input-details">
       <div class="input-1">
         <h4>Cardholder Name</h4>
-        <input type="text" placeholder="e.g. Jane Appleseed" name="name" id="name" required>
+        <input type="text" 
+        placeholder="e.g. Jane Appleseed" 
+        name="name" 
+        id="name" 
+        maxlength="24"
+        required>
         <span class="error-msg error-1">Can't be blank</span>
       </div>
       <div class="input-2">
@@ -57,8 +62,7 @@
           id="month" 
           minlength="2" 
           maxlength="2" 
-          required 
-          pattern="[0-9]+">
+          required>
           
           <input type="text" 
           name="exp" 
@@ -69,6 +73,7 @@
           pattern="[0-9]+" 
           required>
           <span class="error-msg error-3">Can't be blank</span>
+          <span class="error-msg error-3-3">Please enter a number between 01 and 12</span>
         </div>
         <div class="cvc">
           <h4>CVC</h4>
