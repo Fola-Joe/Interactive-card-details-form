@@ -40,7 +40,7 @@ cvcInput.addEventListener('keyup', function cvcNumber(e){
 nameInput.addEventListener('input', (e) => {
   const input = e.target.value;
   // Remove all non-letter characters
-  const lettersOnly = input.replace(/[^a-zA-Z]\s/g, '');
+  const lettersOnly = input.replace(/[^a-zA-Z\s]/g, '');
   e.target.value = lettersOnly;
 });
 cardNumInput.addEventListener('input', (e) => {
