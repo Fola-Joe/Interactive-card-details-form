@@ -146,9 +146,6 @@ input {
 	outline: none;
 	margin-bottom: 0.3rem;
 }
-/* input:hover {
-	border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
-} */
 .exp-date > input {
 	width: 3rem;
 	display: inline;
@@ -204,10 +201,29 @@ h5 {
 	color: hsl(279, 6%, 55%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) and (max-width: 1023px) {
 	.completed, .input-details {
 		width: 100%;
 		max-width: 400px;
+	}
+	.front-page, .back-page {width: 20.5rem;}
+	.front-page {
+		left: -2rem;
+		top: 9rem;
+	}
+	.front-page-info {
+		top: 1.25rem;
+		left: 1.25rem;
+		bottom: 1.25rem;
+	}
+	.img-1-1 {
+		margin-bottom: 3.5rem;
+		width: 4rem;
+	}
+	.back-page {top: -9rem;}
+	.cvc-content {
+		top: 5.1rem;
+		font-size: 0.9rem;
 	}
 }
 

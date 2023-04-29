@@ -37,11 +37,22 @@ cvcInput.addEventListener('keyup', function cvcNumber(e){
 });
 
 
-// To avoid inputting characters other than numbers
-cardNumInput.addEventListener('input', (e) => {
+nameInput.addEventListener('input', (e) => {
   const input = e.target.value;
-  const numbersOnly = input.replace(/[^0-9]/g, '');
-  e.target.value = numbersOnly;
+  // Remove all non-letter characters
+  const lettersOnly = input.replace(/[^a-zA-Z]\s/g, '');
+  e.target.value = lettersOnly;
+});
+cardNumInput.addEventListener('input', (e) => {
+    // Remove non-numeric characters and limit to 16 digits
+    const input = e.target.value.replace(/\D/g, '').substring(0, 16); 
+    // Add a space after every 4 digits
+    const spacedInput = input.replace(/(.{4})/g, '$1 ');
+    //to be able to use backspace
+    if (e.inputType === 'deleteContentBackward') {
+        spacedInput = spacedInput.substring(0, spacedInput.length - 1);
+      }
+    e.target.value = spacedInput;
 });
 monthInput.addEventListener('input', (e) => {
   const input = e.target.value;
