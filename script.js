@@ -86,26 +86,34 @@ submit.addEventListener('click', function btnSubmit(e) {
     }
 
     const numError = document.querySelector('.error-2-2');
+    const numError2 = document.querySelector('.error-2');
+    const value = cardNumInput.value;
     if (!cardNumInput.value){
         numError.classList.add('err-msg');
         inputs[1].classList.add('input-err');
-    } else {
+    } else if (value.length < 19) {
+        numError2.classList.add('err-msg');
+        inputs[1].classList.add('input-err')
+    }
+    else {
         numError.classList.remove('err-msg');
+        numError2.classList.remove('err-msg');
         inputs[1].classList.remove('input-err');
     }
 
     const monthError = document.querySelector('.error-3');
+    const monthError3 = document.querySelector('.error-3-3');
     if (!monthInput.value){
         monthError.classList.add('err-msg');
         inputs[2].classList.add('input-err');
     } else if (monthInput.value > 13){
-        const monthError3 = document.querySelector('.error-3-3');
         monthError3.classList.add('err-msg');
         inputs[2].classList.add('input-err');
     } 
     else {
         monthError.classList.remove('err-msg');
         inputs[2].classList.remove('input-err');
+        monthError3.classList.remove('err-msg');
     }
 
     const yearError = document.querySelector('.error-3');
@@ -126,7 +134,7 @@ submit.addEventListener('click', function btnSubmit(e) {
         inputs[4].classList.remove('input-err');
     }
 
-    if (nameInput.value && cardNumInput.value && monthInput.value < 13 && yearInput.value && cvcInput.value){
+    if (nameInput.value && cardNumInput.value && monthInput.value < 13 && yearInput.value && cvcInput.value && value.length >= 19){
         completedPage.style.display = 'block';
         firstPage.style.display = 'none';
     }
@@ -140,5 +148,4 @@ continueBtn.addEventListener('click', function(){
     monthInput.value = '';
     yearInput.value = '';
     cvcInput.value = '';
-    monthError3.classList.remove('err-msg');
 })
