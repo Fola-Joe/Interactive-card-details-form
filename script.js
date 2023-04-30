@@ -45,10 +45,10 @@ nameInput.addEventListener('input', (e) => {
   e.target.value = lettersOnly;
 });
 cardNumInput.addEventListener('input', (e) => {
-    // Remove non-numeric characters and limit to 16 digits
-    const input = e.target.value.replace(/\D/g, '').substring(0, 16); 
+    // Remove non-numeric characters
+    const input = e.target.value.replace(/\D/g, ''); 
     // Add a space after every 4 digits
-    const spacedInput = input.replace(/(.{4})/g, '$1 ');
+    let spacedInput = input.replace(/(.{4})/g, '$1 ');
     //to be able to use backspace
     if (e.inputType === 'deleteContentBackward') {
         spacedInput = spacedInput.substring(0, spacedInput.length - 1);
@@ -87,7 +87,7 @@ submit.addEventListener('click', function btnSubmit(e) {
 
     const numError = document.querySelector('.error-2-2');
     const numError2 = document.querySelector('.error-2');
-    const value = cardNumInput.value;
+    const value = cardNumInput.value.trim();
     if (!cardNumInput.value){
         numError.classList.add('err-msg');
         inputs[1].classList.add('input-err');
@@ -134,7 +134,7 @@ submit.addEventListener('click', function btnSubmit(e) {
         inputs[4].classList.remove('input-err');
     }
 
-    if (nameInput.value && cardNumInput.value && monthInput.value < 13 && yearInput.value && cvcInput.value && value.length >= 19){
+    if (nameInput.value && cardNumInput.value && monthInput.value < 13 && yearInput.value && cvcInput.value && value.length == 19){
         completedPage.style.display = 'block';
         firstPage.style.display = 'none';
     }
