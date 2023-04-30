@@ -146,6 +146,15 @@ input {
 	outline: none;
 	margin-bottom: 0.3rem;
 }
+form input:focus {
+	border-image: linear-gradient(
+	  to bottom,
+	  hsl(249, 99%, 64%),
+	  hsl(249, 99%, 64%)
+	);
+	border-image-slice: 1;
+	border-radius: 0.5rem !important; /* Not Applied */
+  }
 .exp-date > input {
 	width: 3rem;
 	display: inline;
